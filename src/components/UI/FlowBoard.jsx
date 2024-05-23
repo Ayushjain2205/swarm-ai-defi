@@ -23,14 +23,17 @@ const nodeTypes = { agentNode: AgentNode };
 
 export default function FlowBoard() {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <ReactFlow
-        nodes={initialNodes}
-        edges={initialEdges}
-        nodeTypes={nodeTypes}
-      >
-        <Background variant="dots" gap={36} size={2} />
-      </ReactFlow>
-    </div>
+    <ReactFlowProvider>
+      <div style={{ width: "100%", height: "100%" }}>
+        <ReactFlow
+          nodes={initialNodes}
+          edges={initialEdges}
+          nodeTypes={nodeTypes}
+          fitView
+        >
+          <Background variant="dots" gap={36} size={2} />
+        </ReactFlow>
+      </div>
+    </ReactFlowProvider>
   );
 }
