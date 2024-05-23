@@ -9,6 +9,7 @@ const AgentNode = ({ data }) => {
   const AgentComponentsMap = {
     instagram: AgentBlocks.Instagram,
     twitter: AgentBlocks.Twitter,
+    image: AgentBlocks.Image,
     // Add other mappings here
   };
 

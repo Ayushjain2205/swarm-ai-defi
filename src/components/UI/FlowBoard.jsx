@@ -18,8 +18,14 @@ const initialNodes = [
   },
   {
     id: "2",
-    position: { x: 500, y: 400 },
+    position: { x: 500, y: 200 },
     data: { label: "2", agent_type: "twitter" },
+    type: "agentNode",
+  },
+  {
+    id: "3",
+    position: { x: 900, y: 0 },
+    data: { label: "2", agent_type: "image" },
     type: "agentNode",
   },
 ];
@@ -28,6 +34,13 @@ const initialEdges = [
     id: "e1-2",
     source: "1",
     target: "2",
+    type: "smoothstep",
+    //   type:'simplebezier'
+  },
+  {
+    id: "e2-3",
+    source: "2",
+    target: "3",
     type: "smoothstep",
     //   type:'simplebezier'
   },
