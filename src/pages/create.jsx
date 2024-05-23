@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "../components/Layout/Page";
+import FlowBoard from "../components/UI/FlowBoard";
 
 const create = () => {
   return (
@@ -64,7 +65,9 @@ const create = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col flex-grow">Drag board</div>
+        <div className="flex flex-col flex-grow">
+          <FlowBoard />
+        </div>
       </div>
     </Page>
   );
