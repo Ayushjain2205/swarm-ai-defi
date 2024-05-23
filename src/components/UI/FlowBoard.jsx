@@ -8,7 +8,6 @@ import ReactFlow, {
 import AgentNode from "./AgentNode";
 
 import "reactflow/dist/style.css";
-import { type } from "os";
 
 const initialNodes = [
   {
