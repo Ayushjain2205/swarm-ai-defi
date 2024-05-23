@@ -1,5 +1,10 @@
-import React from "react";
-import ReactFlow, { ReactFlowProvider, Background } from "reactflow";
+import { useState, useCallback } from "react";
+import ReactFlow, {
+  ReactFlowProvider,
+  Background,
+  applyEdgeChanges,
+  applyNodeChanges,
+} from "reactflow";
 import AgentNode from "./AgentNode";
 
 import "reactflow/dist/style.css";
@@ -22,13 +27,28 @@ const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 const nodeTypes = { agentNode: AgentNode };
 
 export default function FlowBoard() {
+  const [nodes, setNodes] = useState(initialNodes);
+  const [edges, setEdges] = useState(initialEdges);
+
+  const onNodesChange = useCallback(
+    (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+    []
+  );
+  const onEdgesChange = useCallback(
+    (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    []
+  );
+
   return (
     <ReactFlowProvider>
       <div style={{ width: "100%", height: "100%" }}>
         <ReactFlow
-          nodes={initialNodes}
-          edges={initialEdges}
+          nodes={nodes}
+          onNodesChange={onNodesChange}
+          edges={edges}
+          onEdgesChange={onEdgesChange}
           nodeTypes={nodeTypes}
+          nodesDraggable
           fitView
         >
           <Background variant="dots" gap={36} size={2} />
