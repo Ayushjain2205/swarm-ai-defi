@@ -13,13 +13,13 @@ const initialNodes = [
   {
     id: "1",
     position: { x: 0, y: 0 },
-    data: { label: "1" },
+    data: { label: "1", agent_type: "instagram" },
     type: "agentNode",
   },
   {
     id: "2",
     position: { x: 500, y: 400 },
-    data: { label: "2" },
+    data: { label: "2", agent_type: "twitter" },
     type: "agentNode",
   },
 ];
