@@ -1,5 +1,5 @@
 import React from "react";
-import ReactFlow from "reactflow";
+import ReactFlow, { ReactFlowProvider, Background } from "reactflow";
 
 import "reactflow/dist/style.css";
 
@@ -12,7 +12,9 @@ const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 export default function FlowBoard() {
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <ReactFlow nodes={initialNodes} edges={initialEdges} />
+      <ReactFlow nodes={initialNodes} edges={initialEdges}>
+        <Background variant="dots" gap={36} size={2} />
+      </ReactFlow>
     </div>
   );
 }
