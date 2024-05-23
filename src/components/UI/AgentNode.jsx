@@ -17,7 +17,7 @@ const AgentNode = ({ data }) => {
 
   return (
     <>
-      <div className="relative w-[290px] h-[148px] bg-white rounded-[10px] border-[2px] border-[#EBEBEB] px-[12px] py-[20px]">
+      <div className="relative w-[290px]  bg-white rounded-[10px] border-[2px] border-[#EBEBEB] px-[12px] py-[20px]">
         <div>
           <AgentComponent />
         </div>
