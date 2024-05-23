@@ -8,6 +8,7 @@ import ReactFlow, {
 import AgentNode from "./AgentNode";
 
 import "reactflow/dist/style.css";
+import { type } from "os";
 
 const initialNodes = [
   {
@@ -18,12 +19,20 @@ const initialNodes = [
   },
   {
     id: "2",
-    position: { x: 0, y: 400 },
+    position: { x: 500, y: 400 },
     data: { label: "2" },
     type: "agentNode",
   },
 ];
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
+const initialEdges = [
+  {
+    id: "e1-2",
+    source: "1",
+    target: "2",
+    type: "smoothstep",
+    //   type:'simplebezier'
+  },
+];
 const nodeTypes = { agentNode: AgentNode };
 
 export default function FlowBoard() {
