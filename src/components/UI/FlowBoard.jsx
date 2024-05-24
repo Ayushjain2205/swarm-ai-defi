@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useDrop } from "react-dnd";
 import ReactFlow, {
   Background,
@@ -16,7 +16,7 @@ const nodeTypes = { agentNode: AgentNode };
 export default function FlowBoard() {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
-  const { project } = useReactFlow();
+  const { project, fitView } = useReactFlow();
   const nodeId = useRef(1); // Ref to keep track of the node IDs
 
   const onNodesChange = useCallback(
@@ -53,6 +53,11 @@ export default function FlowBoard() {
       canDrop: !!monitor.canDrop(),
     }),
   }));
+
+  // Fit the view whenever nodes state changes
+  useEffect(() => {
+    fitView();
+  }, [nodes, fitView]);
 
   return (
     <div id="flowboard" ref={drop} style={{ width: "100%", height: "100%" }}>
