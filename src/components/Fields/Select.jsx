@@ -35,7 +35,7 @@ const Select = ({ placeholder, options }) => {
         </svg>
       </div>
       {isOpen && (
-        <ul className="absolute w-full mt-[10px] border-[2px] border-[#EBEBEB] bg-white rounded-[4px]">
+        <ul className="absolute w-full mt-[10px] border-[2px] border-[#EBEBEB] bg-white rounded-[4px] z-20">
           {options.map((option, index) => (
             <li
               key={index}
