@@ -12,7 +12,7 @@ const Link = () => {
       {links.map((link, index) => (
         <div
           key={index}
-          className="relative flex items-center border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 mb-2"
+          className="relative flex items-center border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 mb-[12px]"
         >
           <input
             type="text"
