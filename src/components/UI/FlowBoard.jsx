@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { useDrop } from "react-dnd";
 import ReactFlow, {
-  ReactFlowProvider,
   Background,
   applyEdgeChanges,
   applyNodeChanges,
+  useReactFlow,
 } from "reactflow";
 import AgentNode from "./AgentNode";
 
@@ -30,6 +30,7 @@ const initialNodes = [
     type: "agentNode",
   },
 ];
+
 const initialEdges = [
   {
     id: "e1-2",
@@ -44,16 +45,20 @@ const initialEdges = [
     type: "smoothstep",
   },
 ];
+
 const nodeTypes = { agentNode: AgentNode };
 
 export default function FlowBoard() {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
+  const { project } = useReactFlow();
+  const nodeId = useRef(nodes.length + 1); // Ref to keep track of the node IDs
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
     []
   );
+
   const onEdgesChange = useCallback(
     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
     []
@@ -62,15 +67,15 @@ export default function FlowBoard() {
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: "AGENT_BLOCK",
     drop: (item, monitor) => {
-      const offset = monitor.getClientOffset();
-      const position = offsetToRFPosition(offset);
+      const clientOffset = monitor.getClientOffset();
+      const position = project(clientOffset);
       const newNode = {
-        id: `${nodes.length + 1}`,
+        id: `${nodeId.current++}`, // Generate unique ID using ref
         position,
-        data: { label: `${nodes.length + 1}`, agent_type: item.type },
+        data: { label: `Node ${nodeId.current - 1}`, agent_type: item.type },
         type: "agentNode",
       };
-      setNodes((nds) => nds.concat(newNode));
+      setNodes((nds) => [...nds, newNode]); // Append new node to the existing nodes
     },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
@@ -78,26 +83,19 @@ export default function FlowBoard() {
     }),
   }));
 
-  const offsetToRFPosition = (offset) => {
-    const rect = document.getElementById("flowboard").getBoundingClientRect();
-    return { x: offset.x - rect.left, y: offset.y - rect.top };
-  };
-
   return (
-    <ReactFlowProvider>
-      <div id="flowboard" ref={drop} style={{ width: "100%", height: "100%" }}>
-        <ReactFlow
-          nodes={nodes}
-          onNodesChange={onNodesChange}
-          edges={edges}
-          onEdgesChange={onEdgesChange}
-          nodeTypes={nodeTypes}
-          nodesDraggable
-          fitView
-        >
-          <Background variant="dots" gap={36} size={2} />
-        </ReactFlow>
-      </div>
-    </ReactFlowProvider>
+    <div id="flowboard" ref={drop} style={{ width: "100%", height: "100%" }}>
+      <ReactFlow
+        nodes={nodes}
+        onNodesChange={onNodesChange}
+        edges={edges}
+        onEdgesChange={onEdgesChange}
+        nodeTypes={nodeTypes}
+        nodesDraggable
+        fitView
+      >
+        <Background variant="dots" gap={36} size={2} />
+      </ReactFlow>
+    </div>
   );
 }
