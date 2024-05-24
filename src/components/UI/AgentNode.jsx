@@ -30,12 +30,7 @@ const AgentNode = ({ data }) => {
         <Handle
           type="target"
           position={Position.Left}
-          style={{
-            background: "transparent",
-            border: "transparent",
-            marginRight: "-5px",
-          }}
-          isConnectable={false}
+          style={{ background: "#555" }}
         />
       </div>
     </>
