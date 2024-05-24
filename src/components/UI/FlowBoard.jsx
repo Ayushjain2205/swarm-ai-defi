@@ -60,7 +60,12 @@ export default function FlowBoard() {
   }, [nodes, fitView]);
 
   return (
-    <div id="flowboard" ref={drop} style={{ width: "100%", height: "100%" }}>
+    <div
+      id="flowboard"
+      className="absolute h-[calc(100vh-78px)]"
+      ref={drop}
+      style={{ width: "100%" }}
+    >
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
@@ -73,6 +78,7 @@ export default function FlowBoard() {
       >
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
+      {/* <div className="relative bottom-[50px] z-50">Hello</div> */}
     </div>
   );
 }
