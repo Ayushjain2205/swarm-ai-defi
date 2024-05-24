@@ -17,16 +17,13 @@ const create = () => {
                 <DraggableItem
                   type="instagram"
                   icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                >
-                  Instagram
-                </DraggableItem>
+                />
                 <DraggableItem
                   type="twitter"
                   icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                >
-                  Twitter
-                </DraggableItem>
-                <DraggableItem type="image">Image</DraggableItem>
+                />
+
+                <DraggableItem type="image" />
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +41,8 @@ const create = () => {
                 </svg>
               </div>
               <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
-                <div className="size-[45px] border border-black rounded"></div>
-                <div className="size-[45px] border border-black rounded"></div>
+                <DraggableItem type="report" />
+                <DraggableItem type="analyse" />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -62,8 +59,6 @@ const create = () => {
                 </svg>
               </div>
               <div className="flex flex-col items-center gap-[20px] py-[20px] ">
-                <div className="size-[45px] border border-black rounded"></div>
-                <div className="size-[45px] border border-black rounded"></div>
                 <div className="size-[45px] border border-black rounded"></div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

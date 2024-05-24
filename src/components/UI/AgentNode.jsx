@@ -10,6 +10,8 @@ const AgentNode = ({ data }) => {
     instagram: AgentBlocks.Instagram,
     twitter: AgentBlocks.Twitter,
     image: AgentBlocks.Image,
+    analyse: AgentBlocks.Analyse,
+    report: AgentBlocks.Report,
     // Add other mappings here
   };
 
