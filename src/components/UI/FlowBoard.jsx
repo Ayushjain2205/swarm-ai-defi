@@ -35,11 +35,10 @@ const initialEdges = [
     source: "1",
     target: "2",
     type: "smoothstep",
-    //   type:'simplebezier'
   },
   {
     id: "e2-3",
-    source: "2",
+    source: "1",
     target: "3",
     type: "smoothstep",
     //   type:'simplebezier'

@@ -38,7 +38,7 @@ const AgentNode = ({ data }) => {
           isConnectable={false}
         />
       </div>
-      <div
+      {/* <div
         className="absolute w-[20px] h-[20px] flex items-center justify-center rounded-full bg-black"
         style={{ top: "50%", right: "-10px", transform: "translateY(-50%)" }}
       >
@@ -57,7 +57,7 @@ const AgentNode = ({ data }) => {
             strokeLinejoin="round"
           />
         </svg>
-      </div>
+      </div> */}
     </>
   );
 };
