@@ -54,11 +54,6 @@ export default function FlowBoard() {
     }),
   }));
 
-  // Fit the view whenever nodes state changes
-  useEffect(() => {
-    fitView();
-  }, [nodes, fitView]);
-
   return (
     <div
       id="flowboard"
@@ -74,7 +69,6 @@ export default function FlowBoard() {
         onConnect={onConnect} // Handle edge creation
         nodeTypes={nodeTypes}
         nodesDraggable
-        fitView
       >
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
