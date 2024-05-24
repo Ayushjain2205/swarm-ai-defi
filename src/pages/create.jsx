@@ -14,8 +14,18 @@ const create = () => {
           <div className="flex flex-row h-[calc(100vh-78px)]">
             <div className="flex flex-col w-[96px] h-full overflow-y-auto scrollbar-hide border-r-[2px] border-[#EBEBEB]">
               <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
-                <DraggableItem type="instagram">Instagram</DraggableItem>
-                <DraggableItem type="twitter">Twitter</DraggableItem>
+                <DraggableItem
+                  type="instagram"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                >
+                  Instagram
+                </DraggableItem>
+                <DraggableItem
+                  type="twitter"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                >
+                  Twitter
+                </DraggableItem>
                 <DraggableItem type="image">Image</DraggableItem>
 
                 <svg
