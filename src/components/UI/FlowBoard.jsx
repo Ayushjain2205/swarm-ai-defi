@@ -4,6 +4,7 @@ import ReactFlow, {
   Background,
   applyEdgeChanges,
   applyNodeChanges,
+  addEdge,
   useReactFlow,
 } from "reactflow";
 import AgentNode from "./AgentNode";
@@ -64,6 +65,12 @@ export default function FlowBoard() {
     []
   );
 
+  const onConnect = useCallback(
+    (params) =>
+      setEdges((eds) => addEdge({ ...params, type: "smoothstep" }, eds)),
+    []
+  );
+
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
     accept: "AGENT_BLOCK",
     drop: (item, monitor) => {
@@ -90,6 +97,7 @@ export default function FlowBoard() {
         onNodesChange={onNodesChange}
         edges={edges}
         onEdgesChange={onEdgesChange}
+        onConnect={onConnect} // Handle edge creation
         nodeTypes={nodeTypes}
         nodesDraggable
         fitView
