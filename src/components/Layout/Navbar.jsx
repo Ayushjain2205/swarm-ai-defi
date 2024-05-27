@@ -13,10 +13,12 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-row justify-between items-center px-[30px] h-[78px] border-b-[2px] border-black">
-      <div className="flex text-[24px] font-[700]">Enabling Agents</div>
+      <div className="flex text-[24px] font-[700]">
+        <Link href="/">Enabling Agents</Link>
+      </div>
       <div className="flex flex-row gap-[30px]">
-        <Link href="/explore" className={getLinkClasses("/explore")}>
-          Explore
+        <Link href="/use" className={getLinkClasses("/use")}>
+          Use
         </Link>
         <Link href="/create" className={getLinkClasses("/create")}>
           Create
