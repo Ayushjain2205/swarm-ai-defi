@@ -1,6 +1,6 @@
 const cardsData = [
   {
-    title: "Campaign Analysis 1",
+    title: "Campaign Analysis",
     icon: {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
       alt: "Instagram icon",
@@ -13,24 +13,18 @@ const cardsData = [
   {
     title: "Campaign Analysis 2",
     icon: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+      src: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
       alt: "Instagram icon",
     },
-    labels: [
-      { name: "Analyse", color: "#6E5B9875" },
-      { name: "Image", color: "#0FA95880" },
-    ],
+    labels: [{ name: "Scrape", color: "#6E5B9875" }],
   },
   {
-    title: "Campaign Analysis 3",
+    title: "Create job list",
     icon: {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+      src: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
       alt: "Instagram icon",
     },
-    labels: [
-      { name: "Analyse", color: "#6E5B9875" },
-      { name: "Image", color: "#0FA95880" },
-    ],
+    labels: [{ name: "Scrape", color: "#6E5B9875" }],
   },
   {
     title: "Campaign Analysis 4",
