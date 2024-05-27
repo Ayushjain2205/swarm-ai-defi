@@ -1,12 +1,13 @@
 import React from "react";
 import Page from "../components/Layout/Page";
 import ExploreCard from "../components/UI/ExploreCard";
+import cardsData from "../helpers/cardsData";
 
 const explore = () => {
-  const numberOfCards = 7; // Define the number of cards here
-  const cards = Array.from({ length: numberOfCards }, (_, index) => (
-    <ExploreCard key={index} />
+  const cards = cardsData.map((data, index) => (
+    <ExploreCard key={index} {...data} />
   ));
+
   const rows = [];
   let index = 0;
 
