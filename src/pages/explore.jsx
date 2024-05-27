@@ -4,11 +4,11 @@ import ExploreCard from "../components/UI/ExploreCard";
 import ExploreModal from "../components/UI/ExploreModal";
 import cardsData from "../helpers/cardsData";
 
-const explore = () => {
+const Explore = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
-  const handleCardClick = (title) => {
-    setSelectedCard(title);
+  const handleCardClick = (cardData) => {
+    setSelectedCard(cardData);
   };
 
   const handleCloseModal = () => {
@@ -16,11 +16,7 @@ const explore = () => {
   };
 
   const cards = cardsData.map((data, index) => (
-    <ExploreCard
-      key={index}
-      {...data}
-      onClick={() => handleCardClick(data.title)}
-    />
+    <ExploreCard key={index} {...data} onClick={() => handleCardClick(data)} />
   ));
 
   const rows = [];
@@ -68,10 +64,10 @@ const explore = () => {
     <Page>
       <div className="grid gap-[30px] px-[30px] py-[40px]">{rows}</div>
       {selectedCard && (
-        <ExploreModal title={selectedCard} onClose={handleCloseModal} />
+        <ExploreModal cardData={selectedCard} onClose={handleCloseModal} />
       )}
     </Page>
   );
 };
 
-export default explore;
+export default Explore;
