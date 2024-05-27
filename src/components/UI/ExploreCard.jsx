@@ -1,8 +1,11 @@
 import React from "react";
 
-const ExploreCard = ({ title, icon, labels }) => {
+const ExploreCard = ({ title, icon, labels, onClick }) => {
   return (
-    <div className="flex flex-col gap-[15px] justify-end h-[230px] min-w-[393px] p-[30px] border border-black rounded-[4px]">
+    <div
+      className="flex flex-col gap-[15px] justify-end h-[230px] min-w-[393px] p-[30px] border border-black rounded-[4px] cursor-pointer"
+      onClick={onClick}
+    >
       <div className="flex flex-row gap-[14px] items-center">
         <img src={icon.src} className="size-[30px] rounded" alt={icon.alt} />
         {labels.map((label, index) => (
