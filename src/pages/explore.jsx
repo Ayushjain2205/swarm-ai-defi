@@ -3,27 +3,54 @@ import Page from "../components/Layout/Page";
 import ExploreCard from "../components/UI/ExploreCard";
 
 const explore = () => {
+  const numberOfCards = 7; // Define the number of cards here
+  const cards = Array.from({ length: numberOfCards }, (_, index) => (
+    <ExploreCard key={index} />
+  ));
+  const rows = [];
+  let index = 0;
+
+  while (index < cards.length) {
+    // First Row: 3 Cards
+    if (index < cards.length) {
+      rows.push(
+        <div
+          key={`row-${rows.length}`}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]"
+        >
+          {cards.slice(index, index + 3)}
+        </div>
+      );
+      index += 3;
+    }
+
+    // Second Row: 1 Card spanning full width
+    if (index < cards.length) {
+      rows.push(
+        <div key={`row-${rows.length}`} className="col-span-1">
+          {cards[index]}
+        </div>
+      );
+      index += 1;
+    }
+
+    // Third Row: 2 Cards each taking half width
+    if (index < cards.length) {
+      rows.push(
+        <div
+          key={`row-${rows.length}`}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-[30px]"
+        >
+          {cards.slice(index, index + 2)}
+        </div>
+      );
+      index += 2;
+    }
+  }
+
   return (
     <Page>
-      <div className="grid gap-[30px] px-[30px] py-[40px]">
-        {/* First Row: 3 Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-          <ExploreCard />
-          <ExploreCard />
-          <ExploreCard />
-        </div>
-
-        {/* Second Row: 1 Card spanning full width */}
-        <div className="col-span-1">
-          <ExploreCard />
-        </div>
-
-        {/* Third Row: 2 Cards each taking half width */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">
-          <ExploreCard />
-          <ExploreCard />
-        </div>
-      </div>
+      <div className="grid gap-[30px] px-[30px] py-[40px]">{rows}</div>
     </Page>
   );
 };
