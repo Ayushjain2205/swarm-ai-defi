@@ -1,20 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-const ExploreCard = ({ title, icon, labels }) => {
+const ExploreCard = ({ id, title, icon, labels }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    const query = {
-      title,
-      iconSrc: icon.src,
-      iconAlt: icon.alt,
-      labels: JSON.stringify(labels), // Convert labels to a JSON string
-    };
-    router.push({
-      pathname: "/use",
-      query,
-    });
+    router.push(`/use/${id}`);
   };
 
   return (

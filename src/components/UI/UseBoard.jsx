@@ -9,6 +9,7 @@ import ReactFlow, {
   useReactFlow,
 } from "reactflow";
 import AgentNode from "./AgentNode";
+import cardsData from "../../helpers/cardsData";
 
 import "reactflow/dist/style.css";
 
@@ -21,8 +22,10 @@ export default function UseBoard() {
   const nodeId = useRef(1); // Ref to keep track of the node IDs
 
   const router = useRouter();
-  const { title, iconSrc, iconAlt, labels } = router.query;
-  const parsedLabels = labels ? JSON.parse(labels) : [];
+  const { cardIndex } = router.query;
+  const cardData = cardIndex !== undefined ? cardsData[cardIndex] : {};
+  const { title, icon, labels } = cardData;
+  const parsedLabels = labels || [];
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -81,7 +84,13 @@ export default function UseBoard() {
           The agent will analyse a campaign on Instagram and generate a report
         </p>
         <div className="flex flex-row w-full items-center mb-[20px] justify-center">
-          <img src={iconSrc} className="size-[30px] rounded" alt={iconAlt} />
+          {icon && (
+            <img
+              src={icon.src}
+              className="size-[30px] rounded"
+              alt={icon.alt}
+            />
+          )}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="84"
@@ -92,7 +101,7 @@ export default function UseBoard() {
             <path
               d="M0.341797 28.985H6.9315C12.4543 28.985 16.9315 24.5078 16.9315 18.985V10.7422C16.9315 5.21935 21.4087 0.742188 26.9315 0.742188H44.7207C50.2436 0.742188 54.7207 5.21934 54.7207 10.7422V50.5301C54.7207 54.9841 58.3314 58.5949 62.7855 58.5949V58.5949C67.2395 58.5949 70.8502 54.9841 70.8502 50.5301V38.9849C70.8502 33.4621 75.3274 28.985 80.8502 28.985H83.293"
               stroke="black"
-              strokeOpacity="0.14"
+              stroke-opacity="0.14"
             />
           </svg>
           {parsedLabels.map((label, index) => (

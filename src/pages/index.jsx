@@ -16,7 +16,12 @@ const Explore = () => {
   };
 
   const cards = cardsData.map((data, index) => (
-    <ExploreCard key={index} {...data} onClick={() => handleCardClick(data)} />
+    <ExploreCard
+      key={index}
+      id={index}
+      {...data}
+      onClick={() => handleCardClick(data)}
+    />
   ));
 
   const rows = [];
