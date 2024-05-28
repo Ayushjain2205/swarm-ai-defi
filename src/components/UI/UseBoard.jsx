@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { useDrop } from "react-dnd";
 import ReactFlow, {
@@ -43,31 +43,20 @@ export default function UseBoard() {
     []
   );
 
-  const [{ canDrop, isOver }, drop] = useDrop(() => ({
-    accept: "AGENT_BLOCK",
-    drop: (item, monitor) => {
-      const clientOffset = monitor.getClientOffset();
-      const position = project(clientOffset);
-      const newNode = {
-        id: `${nodeId.current++}`, // Generate unique ID using ref
-        position,
-        data: { label: `Node ${nodeId.current - 1}`, agent_type: item.type },
+  useEffect(() => {
+    // Initialize with a simple node
+    setNodes([
+      {
+        id: "1",
         type: "agentNode",
-      };
-      setNodes((nds) => [...nds, newNode]); // Append new node to the existing nodes
-    },
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-      canDrop: !!monitor.canDrop(),
-    }),
-  }));
+        data: { label: "Start Node", agent_type: "simple" },
+        position: { x: 250, y: 5 },
+      },
+    ]);
+  }, []);
 
   return (
-    <div
-      id="flowboard"
-      className="relative h-[calc(100vh-78px)] w-full"
-      ref={drop}
-    >
+    <div id="flowboard" className="relative h-[calc(100vh-78px)] w-full">
       <ReactFlow
         nodes={nodes}
         onNodesChange={onNodesChange}
@@ -75,7 +64,11 @@ export default function UseBoard() {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect} // Handle edge creation
         nodeTypes={nodeTypes}
-        nodesDraggable
+        nodesDraggable={false}
+        panOnScroll={false}
+        zoomOnScroll={false}
+        panOnDrag={false}
+        zoomOnDoubleClick={false}
       >
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
