@@ -1,10 +1,10 @@
 import React from "react";
 
-const Loader = () => {
+const Loader = ({ isRunning = true }) => {
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center mb-[20px]">
       <svg
-        className="animate-spin"
+        className={isRunning ? "animate-spin" : ""}
         xmlns="http://www.w3.org/2000/svg"
         width="55"
         height="55"
