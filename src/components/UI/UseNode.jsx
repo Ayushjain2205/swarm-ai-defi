@@ -6,6 +6,7 @@ import * as UseBlocks from "../UseBlocks";
 const UseComponentsMap = {
   analyze: UseBlocks.Analyze,
   report: UseBlocks.Report,
+  browse: UseBlocks.Browse,
   // Add other mappings here
 };
 

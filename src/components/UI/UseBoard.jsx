@@ -5,7 +5,6 @@ import ReactFlow, {
   applyEdgeChanges,
   applyNodeChanges,
   addEdge,
-  useReactFlow,
 } from "reactflow";
 import AgentNode from "./AgentNode";
 import UseNode from "./UseNode";
@@ -65,7 +64,7 @@ export default function UseBoard() {
         {
           id: newNodeId,
           type: "useNode",
-          data: { label: "Second Node", use_type: "analyze" },
+          data: { label: "Second Node", use_type: "browse" },
           position: { x: 550, y: 200 },
         },
       ]);
