@@ -10,6 +10,7 @@ import AgentNode from "./AgentNode";
 import UseNode from "./UseNode";
 import cardsData from "../../helpers/cardsData";
 import UseHeader from "./UseHeader";
+import nodesConfig from "../../helpers/nodesConfig";
 
 import "reactflow/dist/style.css";
 
@@ -18,7 +19,7 @@ const nodeTypes = { agentNode: AgentNode, useNode: UseNode };
 export default function UseBoard() {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
-  const nodeId = useRef(1); // Ref to keep track of the node IDs
+  const nodeId = useRef(nodesConfig.length); // Ref to keep track of the node IDs
 
   const router = useRouter();
   const { cardIndex } = router.query;
@@ -45,48 +46,27 @@ export default function UseBoard() {
   );
 
   useEffect(() => {
-    // Initialize with a simple node
-    setNodes([
-      {
-        id: "1",
-        type: "useNode",
-        data: {
-          use_type: "instagram",
-        },
-        position: { x: 50, y: 200 },
-      },
-    ]);
+    nodesConfig.forEach((nodeConfig, index) => {
+      const timer = setTimeout(() => {
+        setNodes((nds) => [...nds, nodeConfig]);
 
-    // Add another node after 10 seconds and connect them
-    const timer = setTimeout(() => {
-      const newNodeId = `${nodeId.current + 1}`;
+        // Optionally add edges to connect nodes
+        if (index > 0) {
+          setEdges((eds) => [
+            ...eds,
+            {
+              id: `e${index}-${index + 1}`,
+              source: nodesConfig[index - 1].id,
+              target: nodeConfig.id,
+              type: "smoothstep",
+              animated: true,
+            },
+          ]);
+        }
+      }, nodeConfig.addAfter * 1000);
 
-      setNodes((nds) => [
-        ...nds,
-        {
-          id: newNodeId,
-          type: "useNode",
-          data: { label: "Second Node", use_type: "browse" },
-          position: { x: 550, y: 200 },
-        },
-      ]);
-
-      setEdges((eds) => [
-        ...eds,
-        {
-          id: "e1-2",
-          source: "1",
-          target: newNodeId,
-          type: "smoothstep",
-          animated: true,
-        },
-      ]);
-
-      nodeId.current += 1; // Increment node ID
-    }, 5000);
-
-    // Cleanup timeout
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    });
   }, []);
 
   return (
