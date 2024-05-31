@@ -51,9 +51,7 @@ export default function UseBoard() {
         id: "1",
         type: "useNode",
         data: {
-          label: "Start Node",
-          use_type: "report",
-          label_color: "#87D4AB",
+          use_type: "instagram",
         },
         position: { x: 50, y: 200 },
       },
