@@ -17,6 +17,14 @@ const UseNode = ({ data }) => {
 
   return (
     <div className="relative w-[290px] bg-white rounded-[10px] border-[2px] border-[#EBEBEB] px-[12px] py-[20px]">
+      {data && (
+        <div
+          className="h-[30px] w-[105px] flex items-center justify-center font-[500] text-white rounded-[8px]"
+          style={{ backgroundColor: data.label_color }}
+        >
+          {data.label}
+        </div>
+      )}
       <div>
         <UseComponent />
       </div>

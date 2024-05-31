@@ -50,7 +50,11 @@ export default function UseBoard() {
       {
         id: "1",
         type: "useNode",
-        data: { label: "Start Node", use_type: "report" },
+        data: {
+          label: "Start Node",
+          use_type: "report",
+          label_color: "#87D4AB",
+        },
         position: { x: 50, y: 200 },
       },
     ]);
