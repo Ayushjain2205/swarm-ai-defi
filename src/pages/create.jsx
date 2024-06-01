@@ -31,8 +31,8 @@ const create = () => {
                   icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
                 />
                 <DraggableItem
-                  type="google"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+                  type="youtube"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
                 />
 
                 <svg

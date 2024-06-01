@@ -9,6 +9,7 @@ const AgentComponentsMap = {
   spotify: AgentBlocks.Spotify,
   linkedin: AgentBlocks.Linkedin,
   google: AgentBlocks.Google,
+  youtube: AgentBlocks.Youtube,
   image: AgentBlocks.Image,
   analyse: AgentBlocks.Analyse,
   report: AgentBlocks.Report,
