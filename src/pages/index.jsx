@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Page from "../components/Layout/Page";
 import ExploreCard from "../components/UI/ExploreCard";
 import ExploreModal from "../components/UI/ExploreModal";
@@ -6,13 +7,18 @@ import cardsData from "../helpers/cardsData";
 
 const Explore = () => {
   const [selectedCard, setSelectedCard] = useState(null);
+  const router = useRouter();
 
-  const handleCardClick = (cardData) => {
-    setSelectedCard(cardData);
+  const handleCardClick = (cardData, id) => {
+    setSelectedCard({ ...cardData, id });
   };
 
   const handleCloseModal = () => {
     setSelectedCard(null);
+  };
+
+  const handleUseClick = (id) => {
+    router.push(`/use/${id}`);
   };
 
   const cards = cardsData.map((data, index) => (
@@ -20,7 +26,7 @@ const Explore = () => {
       key={index}
       id={index}
       {...data}
-      onClick={() => handleCardClick(data)}
+      onClick={() => handleCardClick(data, index)}
     />
   ));
 
@@ -69,7 +75,11 @@ const Explore = () => {
     <Page>
       <div className="grid gap-[30px] px-[30px] py-[40px]">{rows}</div>
       {selectedCard && (
-        <ExploreModal cardData={selectedCard} onClose={handleCloseModal} />
+        <ExploreModal
+          cardData={selectedCard}
+          onClose={handleCloseModal}
+          onUseClick={() => handleUseClick(selectedCard.id)}
+        />
       )}
     </Page>
   );

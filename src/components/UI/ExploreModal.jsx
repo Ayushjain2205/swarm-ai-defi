@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExploreModal = ({ cardData, onClose }) => {
+const ExploreModal = ({ cardData, onClose, onUseClick }) => {
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -70,7 +70,10 @@ const ExploreModal = ({ cardData, onClose }) => {
             ))}
           </div>
         </div>
-        <button className="w-full h-[45px] text-white text-[16px] font-[500] bg-black rounded-[5px]">
+        <button
+          className="w-full h-[45px] text-white text-[16px] font-[500] bg-black rounded-[5px]"
+          onClick={onUseClick}
+        >
           Use
         </button>
       </div>
