@@ -50,17 +50,34 @@ export default function UseBoard() {
         setNodes((nds) => [...nds, nodeConfig]);
 
         // Optionally add edges to connect nodes
-        if (index > 0) {
-          setEdges((eds) => [
-            ...eds,
-            {
-              id: `e${index}-${index + 1}`,
-              source: nodesConfig[index - 1].id,
-              target: nodeConfig.id,
-              type: "smoothstep",
-              animated: true,
-            },
-          ]);
+        if (nodeConfig.targets) {
+          nodeConfig.targets.forEach((targetId) => {
+            setEdges((eds) => [
+              ...eds,
+              {
+                id: `e${nodeConfig.id}-${targetId}`,
+                source: nodeConfig.id,
+                target: targetId,
+                type: "smoothstep",
+                animated: true,
+              },
+            ]);
+          });
+        }
+
+        if (nodeConfig.sources) {
+          nodeConfig.sources.forEach((sourceId) => {
+            setEdges((eds) => [
+              ...eds,
+              {
+                id: `e${sourceId}-${nodeConfig.id}`,
+                source: sourceId,
+                target: nodeConfig.id,
+                type: "smoothstep",
+                animated: true,
+              },
+            ]);
+          });
         }
       }, nodeConfig.addAfter * 1000);
 
@@ -87,7 +104,7 @@ export default function UseBoard() {
       </ReactFlow>
       <UseHeader title={title || "Title"} icons={icons} labels={labels} />
       <div className="absolute flex w-full items-center justify-center bottom-[40px]">
-        <button className="flex items-center justify-center h-[45px] w-[45px] rounded-[5px] bg-black">
+        <button className="hidden flex items-center justify-center h-[45px] w-[45px] rounded-[5px] bg-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
