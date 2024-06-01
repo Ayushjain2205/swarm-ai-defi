@@ -27,7 +27,7 @@ const Navbar = () => {
           My Agents
         </Link>
         <div className="flex flex-row items-center gap-[5px]">
-          <img className="h-[52px] w-[52px]" src="swarm-coin.svg" alt="" />
+          <img className="h-[52px] w-[52px]" src="/swarm-coin.svg" alt="" />
           <span className="text-[16px] font-[700]">480</span>
         </div>
       </div>
