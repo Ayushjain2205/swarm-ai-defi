@@ -2,7 +2,7 @@ import React from "react";
 
 const Loader = ({ isRunning = true }) => {
   return (
-    <div className="w-full flex items-center justify-center my-[20px]">
+    <div className="w-full flex items-center justify-center mb-[20px]">
       <svg
         className={isRunning ? "animate-spin-zoom" : ""}
         xmlns="http://www.w3.org/2000/svg"

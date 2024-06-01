@@ -115,14 +115,14 @@ export default function UseBoard() {
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
       <UseHeader title={title || "Title"} icons={icons} labels={labels} />
-      <div className="absolute flex w-full items-center justify-center bottom-[40px]">
+      {/* <div className="absolute flex w-full items-center justify-center bottom-[40px]">
         <button
           className="flex items-center justify-center h-[45px] w-[150px] rounded-[5px] bg-black text-white"
           onClick={addNextNode}
         >
           .
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
