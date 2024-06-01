@@ -5,15 +5,14 @@ import InputBox from "../Fields/InputBox";
 
 const Report = () => {
   const options = [
-    { label: "/action", value: "action" },
-    { label: "/comedy", value: "comedy" },
-    { label: "/drama", value: "drama" },
+    { label: "PDF", value: "pdf" },
+    { label: "HTML", value: "html" },
+    { label: "DOC", value: "doc" },
   ];
   return (
     <AgentBlock label="Report" label_color="#87D4AB">
-      <Select placeholder="Where" options={options} />
       <InputBox placeholder="no. of pages" />
-      <Select placeholder="Format" options={options} />
+      <Select placeholder="format" options={options} />
     </AgentBlock>
   );
 };
