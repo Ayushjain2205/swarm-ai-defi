@@ -5,15 +5,15 @@ import InputBox from "../Fields/InputBox";
 
 const Image = () => {
   const options = [
-    { label: "/action", value: "action" },
-    { label: "/comedy", value: "comedy" },
-    { label: "/drama", value: "drama" },
+    { label: "Stable Diffusion XL", value: "stable-diffusion-xl" },
+    { label: "DALL-E", value: "dalle" },
+    { label: "Playground v2", value: "playground2" },
   ];
   return (
     <AgentBlock label="Image" label_color="#87D4AB">
-      <Select placeholder="Where" options={options} />
+      <Select placeholder="Which Model" options={options} />
       <InputBox placeholder="no. of results" />
-      <Select placeholder="Format" options={options} />
+      <InputBox placeholder="negative prompt, if any" />
     </AgentBlock>
   );
 };

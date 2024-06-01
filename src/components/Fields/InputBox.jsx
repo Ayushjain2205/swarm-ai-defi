@@ -10,7 +10,7 @@ const InputBox = ({ placeholder }) => {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder={placeholder}
-        className="w-full border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 text-black text-opacity-30 text-[14px] focus:outline-none"
+        className="w-full border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 text-black text-[14px] focus:outline-none"
       />
     </div>
   );
