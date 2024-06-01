@@ -22,8 +22,18 @@ const create = () => {
                   type="twitter"
                   icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
                 />
-
-                <DraggableItem type="image" />
+                <DraggableItem
+                  type="spotify"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png"
+                />
+                <DraggableItem
+                  type="linkedin"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
+                />
+                <DraggableItem
+                  type="google"
+                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+                />
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +51,7 @@ const create = () => {
                 </svg>
               </div>
               <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
+                <DraggableItem type="image" />
                 <DraggableItem type="report" />
                 <DraggableItem type="analyse" />
                 <svg
