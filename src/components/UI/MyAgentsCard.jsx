@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import cardsData from "../../helpers/cardsData";
 
 const MyAgentsCard = ({ id, title, icon, labels }) => {
   const router = useRouter();
@@ -27,6 +26,7 @@ const MyAgentsCard = ({ id, title, icon, labels }) => {
         ))}
       </div>
       <p className="text-[24px] font-[500] leading-[30px]">{title}</p>
+      <p>QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D</p>
     </div>
   );
 };
