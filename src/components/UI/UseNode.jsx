@@ -22,7 +22,7 @@ const UseNode = ({ data }) => {
   return (
     <div className="relative w-[290px] bg-white rounded-[10px] border-[2px] border-[#EBEBEB] px-[12px] py-[20px]">
       <div>
-        <UseComponent />
+        <UseComponent addNextNode={addNextNode} />
       </div>
       <Handle
         type="source"
@@ -34,12 +34,6 @@ const UseNode = ({ data }) => {
         position={Position.Left}
         style={{ background: "#555" }}
       />
-      <button
-        onClick={addNextNode}
-        className="mt-4 bg-blue-500 text-white px-2 py-1 rounded"
-      >
-        Add Next Node
-      </button>
     </div>
   );
 };
