@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Loader from "../UI/Loader";
 import UseInput from "../UI/UseInput";
 import UseBlock from "../Layout/UseBlock";
 import UseThinking from "../UI/UseThinking";
 
 const Analyze = ({ addNextNode }) => {
+  const [stateIndex, setStateIndex] = useState(0);
+  const addNextNodeCalled = useRef(false);
+
   const states = [
     {
       component: (
@@ -46,13 +49,14 @@ const Analyze = ({ addNextNode }) => {
     // Add more states as needed
   ];
 
-  const [stateIndex, setStateIndex] = useState(0);
-
   useEffect(() => {
     if (states[stateIndex].duration) {
       const timer = setTimeout(() => {
         if (stateIndex === states.length - 1) {
-          addNextNode();
+          if (!addNextNodeCalled.current) {
+            addNextNode();
+            addNextNodeCalled.current = true;
+          }
         } else {
           setStateIndex((prevIndex) => prevIndex + 1);
         }
