@@ -16,3 +16,19 @@
 .react-flow__panel {
   display: none;
 }
+
+@keyframes spinAndZoom {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-spin-zoom {
+  animation: spinAndZoom 2s linear infinite;
+}

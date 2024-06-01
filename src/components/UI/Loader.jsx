@@ -4,7 +4,7 @@ const Loader = ({ isRunning = true }) => {
   return (
     <div className="w-full flex items-center justify-center my-[20px]">
       <svg
-        className={isRunning ? "animate-spin" : ""}
+        className={isRunning ? "animate-spin-zoom" : ""}
         xmlns="http://www.w3.org/2000/svg"
         width="55"
         height="55"
