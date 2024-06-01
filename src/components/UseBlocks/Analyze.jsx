@@ -8,10 +8,13 @@ const Analyze = ({ addNextNode }) => {
   const states = [
     {
       component: (
-        <UseInput
-          question="What should I analyse?"
-          onContinue={() => setStateIndex(1)}
-        />
+        <>
+          <Loader isRunning={false} />
+          <UseInput
+            question="What should I analyse?"
+            onContinue={() => setStateIndex(1)}
+          />
+        </>
       ),
     },
     {
@@ -27,7 +30,7 @@ const Analyze = ({ addNextNode }) => {
       component: (
         <>
           <Loader isRunning={true} />
-          <UseThinking question="Still searching, please wait a moment..." />
+          <UseThinking question="Found the right platforms!" />
         </>
       ),
       duration: 5000,
@@ -35,11 +38,10 @@ const Analyze = ({ addNextNode }) => {
     {
       component: (
         <>
-          <Loader isRunning={true} />
-          <UseThinking question="Almost there, wrapping up the search..." />
+          <UseThinking question="Found the right platforms!" stopped />
         </>
       ),
-      duration: 5000,
+      duration: 1000,
     },
     // Add more states as needed
   ];
