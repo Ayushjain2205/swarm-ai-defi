@@ -3,13 +3,13 @@ import Loader from "../UI/Loader";
 import UseInput from "../UI/UseInput";
 import UseBlock from "../Layout/UseBlock";
 
-const Analyze = () => {
+const Google = () => {
   return (
-    <UseBlock label="Analyze" label_color="#6E5B98">
+    <UseBlock icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png">
       <Loader isRunning={false} />
       <UseInput question="which brand should I analyse?" />
     </UseBlock>
   );
 };
 
-export default Analyze;
+export default Google;

@@ -3,13 +3,13 @@ import Loader from "../UI/Loader";
 import UseInput from "../UI/UseInput";
 import UseBlock from "../Layout/UseBlock";
 
-const Analyze = () => {
+const Udemy = () => {
   return (
-    <UseBlock label="Analyze" label_color="#6E5B98">
+    <UseBlock icon="https://builtinsf.com/sites/www.builtinsf.com/files/2022-08/logo.png">
       <Loader isRunning={false} />
       <UseInput question="which brand should I analyse?" />
     </UseBlock>
   );
 };
 
-export default Analyze;
+export default Udemy;

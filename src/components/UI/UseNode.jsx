@@ -8,6 +8,9 @@ const UseComponentsMap = {
   report: UseBlocks.Report,
   browse: UseBlocks.Browse,
   instagram: UseBlocks.Instagram,
+  google: UseBlocks.Google,
+  udemy: UseBlocks.Udemy,
+  youtube: UseBlocks.Youtube,
   // Add other mappings here
 };
 
