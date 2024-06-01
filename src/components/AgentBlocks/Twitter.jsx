@@ -4,9 +4,8 @@ import Select from "../Fields/Select";
 
 const Twitter = () => {
   const options = [
-    { label: "/action", value: "action" },
-    { label: "/comedy", value: "comedy" },
-    { label: "/drama", value: "drama" },
+    { label: "Scrape", value: "scrape" },
+    { label: "Tweet", value: "tweet" },
   ];
 
   return (

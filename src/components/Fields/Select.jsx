@@ -15,7 +15,11 @@ const Select = ({ placeholder, options }) => {
         className="flex items-center justify-between border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-black text-opacity-30 text-[14px]">
+        <span
+          className={`text-black text-[14px] ${
+            !selectedOption ? "text-opacity-30" : ""
+          }`}
+        >
           {selectedOption || placeholder}
         </span>
         <svg

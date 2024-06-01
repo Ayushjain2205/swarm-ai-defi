@@ -6,16 +6,14 @@ import Link from "../Fields/Link";
 
 const Instagram = () => {
   const options = [
-    { label: "/action", value: "action" },
-    { label: "/comedy", value: "comedy" },
-    { label: "/drama", value: "drama" },
+    { label: "Scrape", value: "scrape" },
+    { label: "Post", value: "post" },
+    { label: "Story", value: "story" },
   ];
 
   return (
     <AgentBlock icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
       <Select placeholder="Select an action" options={options} />
-      <InputBox placeholder="no. of images" />
-      <Link />
     </AgentBlock>
   );
 };

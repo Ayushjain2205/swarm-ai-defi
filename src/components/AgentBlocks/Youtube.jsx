@@ -4,9 +4,9 @@ import Select from "../Fields/Select";
 
 const Youtube = () => {
   const options = [
-    { label: "/action", value: "action" },
-    { label: "/comedy", value: "comedy" },
-    { label: "/drama", value: "drama" },
+    { label: "Scrape", value: "scrape" },
+    { label: "Download", value: "download" },
+    { label: "Upload", value: "upload" },
   ];
 
   return (
