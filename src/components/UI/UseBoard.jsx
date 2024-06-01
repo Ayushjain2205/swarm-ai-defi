@@ -24,8 +24,7 @@ export default function UseBoard() {
   const router = useRouter();
   const { cardIndex } = router.query;
   const cardData = cardIndex !== undefined ? cardsData[cardIndex] : {};
-  const { title, icon, labels } = cardData;
-  const parsedLabels = labels || [];
+  const { title = "", icons = [], labels = [] } = cardData;
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -86,11 +85,7 @@ export default function UseBoard() {
       >
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
-      <UseHeader
-        title="The agent will analyse a campaign on Instagram and generate a report"
-        icon={icon}
-        labels={parsedLabels}
-      />
+      <UseHeader title={title || "Title"} icons={icons} labels={labels} />
       <div className="absolute flex w-full items-center justify-center bottom-[40px]">
         <button className="flex items-center justify-center h-[45px] w-[45px] rounded-[5px] bg-black">
           <svg

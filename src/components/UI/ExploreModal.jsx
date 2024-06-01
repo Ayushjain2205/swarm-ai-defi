@@ -29,11 +29,17 @@ const ExploreModal = ({ cardData, onClose, onUseClick }) => {
             </span>
           </div>
           <div className="flex flex-row w-full items-center mb-[20px] justify-center">
-            <img
-              src={cardData.icon.src}
-              className="size-[30px] rounded"
-              alt={cardData.icon.alt}
-            />
+            <div className="flex flex-row gap-[14px]">
+              {cardData.icons.map((icon, index) => (
+                <img
+                  key={index}
+                  src={icon.src}
+                  className="size-[30px] rounded"
+                  alt={icon.alt}
+                />
+              ))}
+            </div>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="84"

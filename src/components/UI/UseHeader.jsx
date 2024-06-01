@@ -1,13 +1,20 @@
 import React from "react";
 
-const UseHeader = ({ title, icon, labels }) => {
+const UseHeader = ({ title, icons, labels }) => {
   return (
     <div className="absolute top-[10px] left-0 w-full z-50">
       <p className="text-[32px] font-[500] text-center">{title}</p>
       <div className="flex flex-row w-full items-center mb-[20px] justify-center">
-        {icon && (
-          <img src={icon.src} className="size-[30px] rounded" alt={icon.alt} />
-        )}
+        <div className="flex flex-row gap-[14px]">
+          {icons.map((icon, index) => (
+            <img
+              key={index}
+              src={icon.src}
+              className="size-[30px] rounded"
+              alt={icon.alt}
+            />
+          ))}
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="84"
