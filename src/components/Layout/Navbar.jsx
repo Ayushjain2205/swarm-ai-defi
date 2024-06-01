@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const getLinkClasses = (path) => {
     return `flex text-[16px] font-[500] ${
-      router.pathname === path ? "border-b-2 border-black" : ""
+      router.pathname.startsWith(path) ? "border-b-2 border-black" : ""
     }`;
   };
 
@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href="/">Swarm.ai</Link>
       </div>
       <div className="flex flex-row items-center gap-[30px]">
-        <Link href="/use" className={getLinkClasses("/use")}>
+        <Link href="/" className={getLinkClasses("/use")}>
           Use
         </Link>
         <Link href="/create" className={getLinkClasses("/create")}>

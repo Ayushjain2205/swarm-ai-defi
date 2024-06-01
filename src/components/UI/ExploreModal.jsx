@@ -23,7 +23,10 @@ const ExploreModal = ({ cardData, onClose, onUseClick }) => {
         <div>
           <div className="flex flex-row justify-between items-center mb-[40px]">
             <p className="text-[24px] font-[500]">{cardData.title}</p>
-            <span className="text-[24px] font-[500]">$20</span>
+            <span className="flex flex-row items-center gap-[5px] text-[24px] font-[500]">
+              <img src="/swarm-coin.svg" className="h-[48px] w-[48px]" alt="" />
+              20
+            </span>
           </div>
           <div className="flex flex-row w-full items-center mb-[20px] justify-center">
             <img
