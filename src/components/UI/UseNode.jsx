@@ -15,7 +15,7 @@ const UseComponentsMap = {
 };
 
 const UseNode = ({ data }) => {
-  const { use_type } = data;
+  const { use_type, addNextNode } = data;
   const UseComponent =
     UseComponentsMap[use_type] || (() => <div>Unknown Use Type</div>);
 
@@ -34,6 +34,12 @@ const UseNode = ({ data }) => {
         position={Position.Left}
         style={{ background: "#555" }}
       />
+      <button
+        onClick={addNextNode}
+        className="mt-4 bg-blue-500 text-white px-2 py-1 rounded"
+      >
+        Add Next Node
+      </button>
     </div>
   );
 };
