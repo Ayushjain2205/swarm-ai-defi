@@ -37,3 +37,7 @@ body {
 .animate-spin-zoom {
   animation: spinAndZoom 2s linear infinite;
 }
+
+.tw-connected-wallet__balance {
+  display: none !important;
+}
