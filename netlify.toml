@@ -1,15 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = "build"
+  command = "npm run clean && npm run build"
+  publish = ".next"
 
 [context.production.environment]
   IGNORE_FOLDER = "contracts"
 
-[build.environment]
-  IGNORE_FOLDER = "contracts"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[build.lifecycle]
-  onBuild = "rm -rf $IGNORE_FOLDER && npm run build"
