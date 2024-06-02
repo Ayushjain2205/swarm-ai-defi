@@ -13,10 +13,6 @@ const Navbar = () => {
     }`;
   };
 
-  // const client = createThirdwebClient({
-  //   clientId: "8530f5ccc7898ddac732f3abad73f31a",
-  // });
-
   return (
     <div className="flex flex-row justify-between items-center px-[30px] h-[78px] border-b-[2px] border-black">
       <div className="flex text-[24px] font-[700]">

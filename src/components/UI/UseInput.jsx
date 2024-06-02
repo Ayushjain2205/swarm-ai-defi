@@ -8,7 +8,7 @@ const UseInput = ({ question, onContinue }) => {
       )}
       <input
         type="text"
-        placeholder="nike"
+        placeholder="enter text"
         className="w-full border-[2px] border-[#EBEBEB] rounded-[4px] px-3 py-2 mb-4 text-black text-[14px] focus:outline-none"
       />
       <button
