@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { createThirdwebClient } from "thirdweb";
-import { ConnectButton } from "thirdweb/react";
+import { ConnectButton, lightTheme } from "thirdweb/react";
+import { client } from "../../helpers/client";
 
 const Navbar = () => {
   const router = useRouter();
@@ -36,7 +36,7 @@ const Navbar = () => {
           <img className="h-[52px] w-[52px]" src="/swarm-coin.svg" alt="" />
           <span className="text-[16px] font-[700]">480</span>
         </div>
-        {/* <ConnectButton client={client} /> */}
+        <ConnectButton client={client} theme="light" />
       </div>
     </div>
   );
