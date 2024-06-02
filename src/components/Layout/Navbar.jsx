@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import { createThirdwebClient } from "thirdweb";
-// import { ConnectButton } from "thirdweb/react";
+import { createThirdwebClient } from "thirdweb";
+import { ConnectButton } from "thirdweb/react";
 
 const Navbar = () => {
   const router = useRouter();
