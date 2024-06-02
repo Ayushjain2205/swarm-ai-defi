@@ -56,7 +56,7 @@ const create = () => {
                 <DraggableItem type="analyse" icon="/icons/3.svg" />
                 <DraggableItem type="image" icon="/icons/4.svg" />
                 <DraggableItem type="report" icon="/icons/5.svg" />
-                <DraggableItem type="analyse" icon="/icons/6.svg" />
+                <DraggableItem type="image" icon="/icons/6.svg" />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
