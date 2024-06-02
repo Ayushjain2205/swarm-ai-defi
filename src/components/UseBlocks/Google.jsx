@@ -12,19 +12,8 @@ const Google = ({ addNextNode }) => {
     {
       component: (
         <>
-          <Loader isRunning={false} />
-          <UseInput
-            question="What should I analyse?"
-            onContinue={() => setStateIndex(1)}
-          />
-        </>
-      ),
-    },
-    {
-      component: (
-        <>
           <Loader isRunning={true} />
-          <UseThinking question="Ohh, got it, Let me search across platforms.." />
+          <UseThinking question="Finding good blogs, course sites" />
         </>
       ),
       duration: 5000,
@@ -33,7 +22,7 @@ const Google = ({ addNextNode }) => {
       component: (
         <>
           <Loader isRunning={true} />
-          <UseThinking question="Found the right platforms!" />
+          <UseThinking question="Looks like I got something!" />
         </>
       ),
       duration: 5000,
@@ -41,7 +30,18 @@ const Google = ({ addNextNode }) => {
     {
       component: (
         <>
-          <UseThinking question="Found the right platforms!" stopped />
+          <UseThinking question="Found some good courses" stopped />
+          <div className="flex flex-col justify-center gap-[10px]">
+            <p className="text-[#25A7DC] text-center text-[9px] font-[500]">
+              https://ai.google/build
+            </p>
+            <p className="text-[#25A7DC] text-center text-[9px] font-[500]">
+              https://www.datacamp.com/blog/how-to-learn-ai
+            </p>
+            <p className="text-[#25A7DC] text-center text-[9px] font-[500]">
+              https://cloud.google.com/learn/training/machinelearning-ai
+            </p>
+          </div>
         </>
       ),
       duration: 1000,

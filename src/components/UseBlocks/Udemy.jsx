@@ -12,19 +12,8 @@ const Udemy = ({ addNextNode }) => {
     {
       component: (
         <>
-          <Loader isRunning={false} />
-          <UseInput
-            question="What should I analyse?"
-            onContinue={() => setStateIndex(1)}
-          />
-        </>
-      ),
-    },
-    {
-      component: (
-        <>
           <Loader isRunning={true} />
-          <UseThinking question="Ohh, got it, Let me search across platforms.." />
+          <UseThinking question="Searching for the right course for you" />
         </>
       ),
       duration: 5000,
@@ -33,7 +22,7 @@ const Udemy = ({ addNextNode }) => {
       component: (
         <>
           <Loader isRunning={true} />
-          <UseThinking question="Found the right platforms!" />
+          <UseThinking question="Looks like I got something!" />
         </>
       ),
       duration: 5000,
@@ -41,7 +30,15 @@ const Udemy = ({ addNextNode }) => {
     {
       component: (
         <>
-          <UseThinking question="Found the right platforms!" stopped />
+          <UseThinking question="Found some good courses" stopped />
+          <div className="flex flex-col justify-center gap-[10px]">
+            <p className="text-[#25A7DC] text-center text-[9px] font-[500]">
+              https://www.udemy.com/course/artificial-intelligence-az/
+            </p>
+            <p className="text-[#25A7DC] text-center text-[9px] font-[500]">
+              https://www.udemy.com/course/ai-masterclass/
+            </p>
+          </div>
         </>
       ),
       duration: 1000,

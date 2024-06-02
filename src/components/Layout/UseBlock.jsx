@@ -12,7 +12,7 @@ const UseBlock = ({ children, icon, label, label_color }) => {
           {label}
         </div>
       )}
-      <div className="mt-[35px] flex flex-col gap-[12px]">{children}</div>
+      <div className="mt-[20px] flex flex-col gap-[12px]">{children}</div>
     </div>
   );
 };

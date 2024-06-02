@@ -20,16 +20,16 @@ const nodesConfig = [
   {
     id: "3",
     type: "useNode",
-    data: { label: "Third Node", use_type: "google" },
-    position: { x: 650, y: 350 },
+    data: { label: "Third Node", use_type: "udemy" },
+    position: { x: 650, y: 380 },
     addAfter: 15, // in seconds
     sources: ["1"], // ids of source nodes
   },
   {
     id: "4",
     type: "useNode",
-    data: { label: "Third Node", use_type: "udemy" },
-    position: { x: 650, y: 550 },
+    data: { label: "Third Node", use_type: "google" },
+    position: { x: 650, y: 600 },
     addAfter: 15, // in seconds
     sources: ["1"], // ids of source nodes
   },
