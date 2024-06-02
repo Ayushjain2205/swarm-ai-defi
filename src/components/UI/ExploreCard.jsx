@@ -3,9 +3,14 @@ import React from "react";
 const ExploreCard = ({ id, title, icons, labels, onClick }) => {
   return (
     <div
-      className="flex flex-col gap-[15px] justify-end h-[230px] min-w-[393px] p-[30px] border border-black rounded-[4px] cursor-pointer"
+      className="relative flex flex-col gap-[15px] justify-end h-[230px] min-w-[393px] p-[30px] border border-black rounded-[4px] cursor-pointer"
       onClick={onClick}
     >
+      <img
+        className="absolute top-0 right-0"
+        src={`/shapes/${id + 1}.svg`}
+        alt=""
+      />
       <div className="flex flex-row gap-[14px] items-center">
         <div className="flex flex-row gap-[14px]">
           {icons.map((icon, index) => (
