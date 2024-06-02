@@ -24,7 +24,7 @@ const Analyze = ({ addNextNode }) => {
       component: (
         <>
           <Loader isRunning={true} />
-          <UseThinking question="Ohh, got it, Let me search across platforms.." />
+          <UseThinking question="Ohh, got it, Let me find platforms.." />
         </>
       ),
       duration: 5000,
@@ -34,6 +34,23 @@ const Analyze = ({ addNextNode }) => {
         <>
           <Loader isRunning={true} />
           <UseThinking question="Found the right platforms!" />
+          <div className="flex flex-row w-full items-center justify-center gap-[10px]">
+            <img
+              className="h-[28px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+              alt=""
+            />
+            <img
+              className="h-[28px]"
+              src="https://builtinsf.com/sites/www.builtinsf.com/files/2022-08/logo.png"
+              alt=""
+            />
+            <img
+              className="h-[28px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+              alt=""
+            />
+          </div>
         </>
       ),
       duration: 5000,
@@ -41,7 +58,24 @@ const Analyze = ({ addNextNode }) => {
     {
       component: (
         <>
-          <UseThinking question="Found the right platforms!" stopped />
+          <UseThinking question="Let me search the platforms..." stopped />
+          <div className="flex flex-row w-full items-center justify-center gap-[10px]">
+            <img
+              className="h-[28px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+              alt=""
+            />
+            <img
+              className="h-[28px]"
+              src="https://builtinsf.com/sites/www.builtinsf.com/files/2022-08/logo.png"
+              alt=""
+            />
+            <img
+              className="h-[28px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png"
+              alt=""
+            />
+          </div>
         </>
       ),
       duration: 1000,

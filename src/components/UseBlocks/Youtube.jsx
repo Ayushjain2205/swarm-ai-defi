@@ -12,19 +12,8 @@ const Youtube = ({ addNextNode }) => {
     {
       component: (
         <>
-          <Loader isRunning={false} />
-          <UseInput
-            question="What should I analyse?"
-            onContinue={() => setStateIndex(1)}
-          />
-        </>
-      ),
-    },
-    {
-      component: (
-        <>
           <Loader isRunning={true} />
-          <UseThinking question="Ohh, got it, Let me search across platforms.." />
+          <UseThinking question="Searching for the right video for you" />
         </>
       ),
       duration: 5000,
@@ -33,7 +22,7 @@ const Youtube = ({ addNextNode }) => {
       component: (
         <>
           <Loader isRunning={true} />
-          <UseThinking question="Found the right platforms!" />
+          <UseThinking question="Looks like I got something!" />
         </>
       ),
       duration: 5000,
@@ -41,7 +30,11 @@ const Youtube = ({ addNextNode }) => {
     {
       component: (
         <>
-          <UseThinking question="Found the right platforms!" stopped />
+          <UseThinking question="Found good playlists for you" stopped />
+          <div className="flex flex-row justify-center gap-[7px]">
+            <img className="w-[105px]" src="/images/youtube1.png" alt="" />
+            <img className="w-[105px]" src="/images/youtube2.png" alt="" />
+          </div>
         </>
       ),
       duration: 1000,
