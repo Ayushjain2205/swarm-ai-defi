@@ -11,8 +11,8 @@ const create = () => {
     <DndProvider backend={HTML5Backend}>
       <ReactFlowProvider>
         <Page>
-          <div className="flex flex-row h-[calc(100vh-78px)]">
-            <div className="flex flex-col w-[96px] h-full overflow-y-auto scrollbar-hide border-r-[2px] border-[#EBEBEB]">
+          <div className="relative flex flex-row h-[calc(100vh-78px)]">
+            {/* <div className="flex flex-col w-[96px] h-full overflow-y-auto scrollbar-hide border-r-[2px] border-[#EBEBEB]">
               <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
                 <DraggableItem
                   type="instagram"
@@ -72,8 +72,11 @@ const create = () => {
                   />
                 </svg>
               </div>
+            </div> */}
+            <div className="flex flex-col absolute top-0 bg-grey h-full w-[120px] z-[50] ">
+              <button>Hello</button>
             </div>
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col ml-[120px] flex-grow">
               <FlowBoard />
             </div>
           </div>

@@ -75,9 +75,8 @@ export default function FlowBoard() {
   return (
     <div
       id="flowboard"
-      className="absolute h-[calc(100vh-78px)]"
+      className="absolute h-[calc(100vh-78px)] w-[calc(100vw-120px)]"
       ref={drop}
-      style={{ width: "100%" }}
     >
       <ReactFlow
         nodes={nodes}
