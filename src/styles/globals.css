@@ -41,3 +41,7 @@ body {
 .tw-connected-wallet__balance {
   display: none !important;
 }
+
+.transition-width {
+  transition: width 0.3s ease-in-out;
+}

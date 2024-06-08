@@ -6,11 +6,213 @@ import Page from "../components/Layout/Page";
 import FlowBoard from "../components/UI/FlowBoard";
 import DraggableItem from "../components/UI/DraggableItem";
 
-const create = () => {
+const Create = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleWidth = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  const sections = [
+    {
+      title: "PROTOCOLS",
+      items: [
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+      ],
+    },
+    {
+      title: "WALLETS",
+      items: [
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+      ],
+    },
+    {
+      title: "ACTION",
+      items: [
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+      ],
+    },
+    {
+      title: "PLATFORMS",
+      items: [
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+      ],
+    },
+    {
+      title: "CHAINS",
+      items: [
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+        {
+          type: "instagram",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        },
+        {
+          type: "twitter",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        },
+        {
+          type: "spotify",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        },
+        {
+          type: "linkedin",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        },
+      ],
+    },
+  ];
+
+  // Helper function to chunk items into rows of 4
+  const chunkItems = (items, size) => {
+    return items.reduce((acc, item, index) => {
+      const chunkIndex = Math.floor(index / size);
+
+      if (!acc[chunkIndex]) {
+        acc[chunkIndex] = []; // start a new chunk
+      }
+
+      acc[chunkIndex].push(item);
+      return acc;
+    }, []);
   };
 
   return (
@@ -19,266 +221,36 @@ const create = () => {
         <Page>
           <div className="relative flex flex-row h-[calc(100vh-78px)]">
             <div
-              className={`flex flex-col absolute top-0 bg-[#F8F8F8] h-full pt-[10px] ${
+              className={`flex flex-col absolute top-0 bg-[#F8F8F8] h-full pt-[10px] transition-width duration-300 ease-in-out ${
                 isExpanded ? "w-[340px]" : "w-[110px]"
               } z-[50]`}
             >
-              <div className="flex flex-row mt-[20px] overflow-hidden">
-                <div className="flex flex-col">
+              {sections.map((section) => (
+                <div
+                  key={section.title}
+                  className="flex flex-col mt-[20px] overflow-hidden"
+                >
                   <p className="text-center w-full text-[13px] font-[700]">
-                    PROTOCOLS
+                    {section.title}
                   </p>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
+                  {chunkItems(section.items, 4).map((row, idx) => (
+                    <div
+                      key={idx}
+                      className={`flex flex-row gap-[30px] px-[35px] py-[10px] transition-width duration-300 ease-in-out ${
+                        isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                      }`}
+                    >
+                      {row.map((item, index) => (
+                        <DraggableItem
+                          key={index}
+                          type={item.type}
+                          icon={item.icon}
+                        />
+                      ))}
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="flex flex-row mt-[20px] overflow-hidden">
-                <div className="flex flex-col">
-                  <p className="text-center w-full text-[13px] font-[700]">
-                    WALLETS
-                  </p>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row mt-[20px] overflow-hidden">
-                <div className="flex flex-col">
-                  <p className="text-center w-full text-[13px] font-[700]">
-                    ACTION
-                  </p>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row mt-[20px] overflow-hidden">
-                <div className="flex flex-col">
-                  <p className="text-center w-full text-[13px] font-[700]">
-                    PLATFORMS
-                  </p>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row mt-[20px] overflow-hidden">
-                <div className="flex flex-col">
-                  <p className="text-center w-full text-[13px] font-[700]">
-                    CHAINS
-                  </p>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                  <div
-                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
-                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
-                    } `}
-                  >
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                    <DraggableItem
-                      type="instagram"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                    />
-                    <DraggableItem
-                      type="twitter"
-                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                    />
-                  </div>
-                </div>
-              </div>
-
+              ))}
               <button
                 className="absolute right-[-16px] bottom-[20px] flex flex-row items-center justify-center h-[32px] w-[32px] bg-black rounded-[5px]"
                 onClick={toggleWidth}
@@ -309,4 +281,4 @@ const create = () => {
   );
 };
 
-export default create;
+export default Create;
