@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { ReactFlowProvider } from "reactflow";
@@ -7,74 +7,297 @@ import FlowBoard from "../components/UI/FlowBoard";
 import DraggableItem from "../components/UI/DraggableItem";
 
 const create = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleWidth = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <DndProvider backend={HTML5Backend}>
       <ReactFlowProvider>
         <Page>
           <div className="relative flex flex-row h-[calc(100vh-78px)]">
-            {/* <div className="flex flex-col w-[96px] h-full overflow-y-auto scrollbar-hide border-r-[2px] border-[#EBEBEB]">
-              <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
-                <DraggableItem
-                  type="instagram"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                />
-                <DraggableItem
-                  type="twitter"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
-                />
-                <DraggableItem
-                  type="spotify"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png"
-                />
-                <DraggableItem
-                  type="linkedin"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"
-                />
-                <DraggableItem
-                  type="youtube"
-                  icon="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
-                />
+            <div
+              className={`flex flex-col absolute top-0 bg-[#F8F8F8] h-full pt-[10px] ${
+                isExpanded ? "w-[340px]" : "w-[110px]"
+              } z-[50]`}
+            >
+              <div className="flex flex-row mt-[20px] overflow-hidden">
+                <div className="flex flex-col">
+                  <p className="text-center w-full text-[13px] font-[700]">
+                    PROTOCOLS
+                  </p>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row mt-[20px] overflow-hidden">
+                <div className="flex flex-col">
+                  <p className="text-center w-full text-[13px] font-[700]">
+                    WALLETS
+                  </p>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row mt-[20px] overflow-hidden">
+                <div className="flex flex-col">
+                  <p className="text-center w-full text-[13px] font-[700]">
+                    ACTION
+                  </p>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row mt-[20px] overflow-hidden">
+                <div className="flex flex-col">
+                  <p className="text-center w-full text-[13px] font-[700]">
+                    PLATFORMS
+                  </p>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row mt-[20px] overflow-hidden">
+                <div className="flex flex-col">
+                  <p className="text-center w-full text-[13px] font-[700]">
+                    CHAINS
+                  </p>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                  <div
+                    className={`flex flex-row gap-[30px] px-[35px] py-[10px] ${
+                      isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                    } `}
+                  >
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                    <DraggableItem
+                      type="instagram"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    />
+                    <DraggableItem
+                      type="twitter"
+                      icon="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png"
+                    />
+                  </div>
+                </div>
+              </div>
 
+              <button
+                className="absolute right-[-16px] bottom-[20px] flex flex-row items-center justify-center h-[32px] w-[32px] bg-black rounded-[5px]"
+                onClick={toggleWidth}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 25 25"
+                  width="6"
+                  height="14"
+                  viewBox="0 0 6 14"
                   fill="none"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.67848 10.881C2.7676 10.7036 2.92344 10.5687 3.11184 10.506C3.30023 10.4433 3.5058 10.4579 3.68348 10.5465L12.349 14.877L21.013 10.545C21.1011 10.5 21.1973 10.4728 21.296 10.4652C21.3947 10.4575 21.4939 10.4694 21.5879 10.5003C21.682 10.5311 21.769 10.5803 21.844 10.6449C21.9189 10.7096 21.9803 10.7884 22.0247 10.8769C22.069 10.9654 22.0954 11.0618 22.1023 11.1605C22.1093 11.2592 22.0966 11.3584 22.065 11.4522C22.0334 11.546 21.9836 11.6326 21.9183 11.7071C21.8531 11.7815 21.7738 11.8423 21.685 11.886L12.685 16.386C12.5807 16.4383 12.4656 16.4655 12.349 16.4655C12.2323 16.4655 12.1173 16.4383 12.013 16.386L3.01298 11.886C2.83555 11.7969 2.7007 11.641 2.63799 11.4526C2.57529 11.2642 2.58985 11.0587 2.67848 10.881Z"
-                    fill="black"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M1.26607 13.8189C1.13989 13.7555 1.044 13.6447 0.999409 13.5107C0.954819 13.3768 0.965173 13.2306 1.0282 13.1042L4.10767 6.94211L1.02713 0.781047C0.995113 0.718366 0.975817 0.649967 0.970357 0.579794C0.964896 0.50962 0.973381 0.439059 0.99532 0.372179C1.01726 0.3053 1.05222 0.243424 1.09819 0.190121C1.14415 0.136817 1.20022 0.0931396 1.26314 0.0616064C1.32607 0.0300722 1.39462 0.0113058 1.46483 0.0063896C1.53504 0.0014734 1.60554 0.0105037 1.67224 0.0329599C1.73895 0.055417 1.80055 0.0908556 1.8535 0.137234C1.90645 0.183612 1.94969 0.240011 1.98073 0.303181L5.18073 6.70318C5.2179 6.77735 5.23725 6.85916 5.23725 6.94211C5.23725 7.02507 5.2179 7.10688 5.18073 7.18105L1.98073 13.581C1.91736 13.7072 1.80654 13.8031 1.67257 13.8477C1.5386 13.8923 1.39241 13.8819 1.26607 13.8189Z"
+                    fill="white"
                   />
                 </svg>
-              </div>
-              <div className="flex flex-col items-center gap-[20px] py-[20px] border-b-[2px] border-[#EBEBEB]">
-                <DraggableItem type="analyse" icon="/icons/1.svg" />
-                <DraggableItem type="analyse" icon="/icons/2.svg" />
-                <DraggableItem type="analyse" icon="/icons/3.svg" />
-                <DraggableItem type="image" icon="/icons/4.svg" />
-                <DraggableItem type="report" icon="/icons/5.svg" />
-                <DraggableItem type="image" icon="/icons/6.svg" />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 25 25"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.67848 10.881C2.7676 10.7036 2.92344 10.5687 3.11184 10.506C3.30023 10.4433 3.5058 10.4579 3.68348 10.5465L12.349 14.877L21.013 10.545C21.1011 10.5 21.1973 10.4728 21.296 10.4652C21.3947 10.4575 21.4939 10.4694 21.5879 10.5003C21.682 10.5311 21.769 10.5803 21.844 10.6449C21.9189 10.7096 21.9803 10.7884 22.0247 10.8769C22.069 10.9654 22.0954 11.0618 22.1023 11.1605C22.1093 11.2592 22.0966 11.3584 22.065 11.4522C22.0334 11.546 21.9836 11.6326 21.9183 11.7071C21.8531 11.7815 21.7738 11.8423 21.685 11.886L12.685 16.386C12.5807 16.4383 12.4656 16.4655 12.349 16.4655C12.2323 16.4655 12.1173 16.4383 12.013 16.386L3.01298 11.886C2.83555 11.7969 2.7007 11.641 2.63799 11.4526C2.57529 11.2642 2.58985 11.0587 2.67848 10.881Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
-            </div> */}
-            <div className="flex flex-col absolute top-0 bg-grey h-full w-[120px] z-[50] ">
-              <button>Hello</button>
+              </button>
             </div>
             <div className="flex flex-col ml-[120px] flex-grow">
               <FlowBoard />

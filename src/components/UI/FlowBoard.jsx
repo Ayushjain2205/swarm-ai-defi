@@ -89,13 +89,7 @@ export default function FlowBoard() {
       >
         <Background variant="dots" gap={36} size={2} />
       </ReactFlow>
-      <div className="flex flex-row w-[calc(100vw-96px)] justify-between relative bottom-[75px] px-[30px] z-50">
-        <button
-          className="flex items-center justify-center h-[45px] w-[182px] text-white bg-black rounded-[5px] cursor-pointer disabled:opacity-40"
-          disabled
-        >
-          Preview
-        </button>
+      <div className="flex flex-row w-[calc(100vw-120px)] justify-end relative bottom-[75px] px-[30px] z-40">
         <button
           className="flex items-center justify-center h-[45px] w-[182px] text-white bg-black rounded-[5px] cursor-pointer"
           onClick={handlePublishClick}

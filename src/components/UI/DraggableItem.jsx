@@ -13,7 +13,7 @@ const DraggableItem = ({ type, icon }) => {
   return (
     <div
       ref={drag}
-      className={`flex items-center justify-center w-[45px] h-[45px] cursor-pointer ${
+      className={`flex items-center justify-center min-w-[45px] w-[45px] h-[45px] cursor-pointer ${
         icon ? "" : "border border-black"
       } rounded`}
       style={{ opacity: isDragging ? 0.5 : 1 }}
