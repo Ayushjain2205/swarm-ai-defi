@@ -41,7 +41,7 @@ const Create = () => {
               {sections.map((section) => (
                 <div
                   key={section.title}
-                  className="flex flex-col mt-[20px] overflow-hidden"
+                  className="flex flex-col mt-[20px] overflow-x-hidden"
                 >
                   <p className="text-center w-full text-[13px] font-[700]">
                     {section.title}
@@ -50,7 +50,7 @@ const Create = () => {
                     <div
                       key={idx}
                       className={`flex flex-row gap-[30px] px-[35px] py-[10px] transition-width duration-300 ease-in-out ${
-                        isExpanded ? "w-[340px]" : "w-[110px] overflow-hidden"
+                        isExpanded ? "w-[340px]" : "w-[110px] "
                       }`}
                     >
                       {row.map((item, index) => (
