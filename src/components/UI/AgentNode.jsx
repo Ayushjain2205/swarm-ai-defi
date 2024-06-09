@@ -2,17 +2,14 @@ import React from "react";
 import { Handle, Position } from "reactflow";
 import * as AgentBlocks from "../AgentBlocks"; // Import all components from AgentBlocks
 import Google from "../AgentBlocks/Google";
+import { polygon } from "thirdweb/chains";
 
 const AgentComponentsMap = {
   instagram: AgentBlocks.Instagram,
   twitter: AgentBlocks.Twitter,
-  spotify: AgentBlocks.Spotify,
-  linkedin: AgentBlocks.Linkedin,
-  google: AgentBlocks.Google,
-  youtube: AgentBlocks.Youtube,
-  image: AgentBlocks.Image,
-  analyse: AgentBlocks.Analyse,
-  report: AgentBlocks.Report,
+  polygon: AgentBlocks.Polygon,
+  linea: AgentBlocks.Linea,
+  hunt: AgentBlocks.Hunt,
   // Add other mappings here
 };
 
