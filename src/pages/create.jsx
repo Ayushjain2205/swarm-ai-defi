@@ -58,6 +58,7 @@ const Create = () => {
                           key={index}
                           type={item.type}
                           icon={item.icon}
+                          border={item.border}
                         />
                       ))}
                     </div>

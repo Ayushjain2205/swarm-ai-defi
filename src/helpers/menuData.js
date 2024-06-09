@@ -3,8 +3,9 @@ const sections = [
     title: "PROTOCOLS",
     items: [
       {
-        type: "instagram",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
+        type: "uniswap",
+        icon: "https://cryptologos.cc/logos/uniswap-uni-logo.png",
+        border: true,
       },
       {
         type: "twitter",
