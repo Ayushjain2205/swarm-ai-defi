@@ -75,6 +75,9 @@ const Create = () => {
                   height="14"
                   viewBox="0 0 6 14"
                   fill="none"
+                  className={`transition-transform duration-300 ease-in-out ${
+                    isExpanded ? "rotate-180" : ""
+                  }`}
                 >
                   <path
                     fillRule="evenodd"
