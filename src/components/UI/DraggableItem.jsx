@@ -32,7 +32,7 @@ const DraggableItem = ({ type, icon, border }) => {
         </span>
       )}
       {showTooltip && (
-        <div className="absolute z-10 w-auto p-2 text-sm text-white bg-black rounded shadow-lg -top-[30px] ">
+        <div className="absolute z-10 w-auto p-2 text-sm text-white bg-black rounded shadow-lg -top-[30px] capitalize ">
           {type}
         </div>
       )}
