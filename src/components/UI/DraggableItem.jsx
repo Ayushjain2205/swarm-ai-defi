@@ -12,7 +12,20 @@ const DraggableItem = ({ type, icon, border }) => {
 
   const [showTooltip, setShowTooltip] = useState(false);
 
-  // Determine additional classes for border and opacity
+  // Handle mouse enter events
+  const handleMouseEnter = () => {
+    // Only allow the tooltip to show if the item is not currently being dragged
+    if (!isDragging) {
+      setShowTooltip(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Always hide tooltip on mouse leave
+    setShowTooltip(false);
+  };
+
+  // Construct class string for conditional styling
   const additionalClasses = `${border ? "border border-black p-[5px]" : ""} ${
     isDragging ? "opacity-50" : "opacity-100"
   }`;
@@ -20,8 +33,8 @@ const DraggableItem = ({ type, icon, border }) => {
   return (
     <div
       ref={drag}
-      onMouseEnter={() => setShowTooltip(true)}
-      onMouseLeave={() => setShowTooltip(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className={`relative flex items-center justify-center min-w-[45px] w-[45px] h-[45px] cursor-pointer rounded-[6px] ${additionalClasses}`}
     >
       {icon ? (
@@ -31,11 +44,12 @@ const DraggableItem = ({ type, icon, border }) => {
           {type.charAt(0)}
         </span>
       )}
-      {showTooltip && (
-        <div className="absolute z-10 w-auto p-2 text-sm text-white bg-black rounded shadow-lg -top-[30px] capitalize ">
-          {type}
-        </div>
-      )}
+      {showTooltip &&
+        !isDragging && ( // Double check to ensure tooltip is not shown during dragging
+          <div className="absolute z-10 w-auto p-2 text-sm text-white bg-black rounded shadow-lg -top-[30px] capitalize">
+            {type}
+          </div>
+        )}
     </div>
   );
 };
