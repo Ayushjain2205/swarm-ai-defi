@@ -15,7 +15,6 @@
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
-    "react-tooltip": "^5.26.4",
     "reactflow": "^11.11.3",
     "thirdweb": "^5.27.0"
   },
