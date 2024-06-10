@@ -36,8 +36,8 @@ const nodesConfig = [
   {
     id: "5",
     type: "useNode",
-    data: { label: "Third Node", use_type: "report" },
-    position: { x: 1300, y: 350 },
+    data: { label: "Third Node", use_type: "portfolio" },
+    position: { x: 1200, y: 350 },
     addAfter: 15, // in seconds
     sources: ["2", "3", "4"], // ids of source nodes
   },

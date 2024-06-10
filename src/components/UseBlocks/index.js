@@ -10,6 +10,7 @@ import Wallet from "./Wallet";
 import Chain from "./Chain";
 import Currency from "./Currency";
 import Strategy from "./Strategy";
+import Portfolio from "./Portfolio";
 
 export {
   Analyze,
@@ -23,4 +24,5 @@ export {
   Chain,
   Currency,
   Strategy,
+  Portfolio,
 };
