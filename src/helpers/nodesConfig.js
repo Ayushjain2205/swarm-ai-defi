@@ -4,7 +4,7 @@ const nodesConfig = [
   {
     id: "1",
     type: "useNode",
-    data: { use_type: "analyze" },
+    data: { use_type: "wallet" },
     position: { x: 50, y: 300 },
     addAfter: 0, // in seconds
     targets: ["2"], // ids of target nodes
@@ -12,7 +12,7 @@ const nodesConfig = [
   {
     id: "2",
     type: "useNode",
-    data: { label: "Second Node", use_type: "youtube" },
+    data: { label: "Second Node", use_type: "chain" },
     position: { x: 650, y: 150 },
     addAfter: 5, // in seconds
     targets: [], // ids of target nodes
@@ -20,7 +20,7 @@ const nodesConfig = [
   {
     id: "3",
     type: "useNode",
-    data: { label: "Third Node", use_type: "udemy" },
+    data: { label: "Third Node", use_type: "currency" },
     position: { x: 650, y: 380 },
     addAfter: 15, // in seconds
     sources: ["1"], // ids of source nodes

@@ -11,6 +11,9 @@ const UseComponentsMap = {
   google: UseBlocks.Google,
   udemy: UseBlocks.Udemy,
   youtube: UseBlocks.Youtube,
+  wallet: UseBlocks.Wallet,
+  chain: UseBlocks.Chain,
+  currency: UseBlocks.Currency,
   // Add other mappings here
 };
 

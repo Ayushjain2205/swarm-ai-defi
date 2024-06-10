@@ -6,4 +6,19 @@ import Google from "./Google";
 import Udemy from "./Udemy";
 import Youtube from "./Youtube";
 
-export { Analyze, Report, Browse, Instagram, Google, Youtube, Udemy };
+import Wallet from "./Wallet";
+import Chain from "./Chain";
+import Currency from "./Currency";
+
+export {
+  Analyze,
+  Report,
+  Browse,
+  Instagram,
+  Google,
+  Youtube,
+  Udemy,
+  Wallet,
+  Chain,
+  Currency,
+};
