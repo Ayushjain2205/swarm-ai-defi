@@ -9,6 +9,7 @@ import Youtube from "./Youtube";
 import Wallet from "./Wallet";
 import Chain from "./Chain";
 import Currency from "./Currency";
+import Strategy from "./Strategy";
 
 export {
   Analyze,
@@ -21,4 +22,5 @@ export {
   Wallet,
   Chain,
   Currency,
+  Strategy,
 };

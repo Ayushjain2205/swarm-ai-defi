@@ -28,7 +28,7 @@ const nodesConfig = [
   {
     id: "4",
     type: "useNode",
-    data: { label: "Third Node", use_type: "google" },
+    data: { label: "Third Node", use_type: "strategy" },
     position: { x: 650, y: 600 },
     addAfter: 15, // in seconds
     sources: ["1"], // ids of source nodes

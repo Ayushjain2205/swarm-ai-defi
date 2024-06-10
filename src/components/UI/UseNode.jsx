@@ -14,6 +14,7 @@ const UseComponentsMap = {
   wallet: UseBlocks.Wallet,
   chain: UseBlocks.Chain,
   currency: UseBlocks.Currency,
+  strategy: UseBlocks.Strategy,
   // Add other mappings here
 };
 
