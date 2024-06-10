@@ -36,7 +36,7 @@ const Strategy = ({ addNextNode }) => {
           />
         )}
         {!showInput && finalMessage && (
-          <p className="text-[16px] font-bold text-black">{finalMessage}</p>
+          <p className="text-[16px] font-[500] text-black">{finalMessage}</p>
         )}
       </div>
     </UseBlock>
