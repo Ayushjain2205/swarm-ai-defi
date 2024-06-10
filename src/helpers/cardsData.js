@@ -1,82 +1,87 @@
 const cardsData = [
   {
-    title: "Campaign Analysis",
+    title: "Token Analysis",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
-        alt: "Instagram icon",
+        src: "https://images.seeklogo.com/logo-png/52/1/linea-logo-png_seeklogo-527155.png",
+        alt: "Linea icon",
       },
     ],
     labels: [
       { name: "Analyse", color: "#6E5B9875" },
-      { name: "Image", color: "#0FA95880" },
+      { name: "Buy", color: "#0FA95880" },
     ],
   },
   {
-    title: "Apply to Jobs",
+    title: "Swap tokens",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
+        src: "https://cryptologos.cc/logos/uniswap-uni-logo.png",
+        alt: "Linkedin icon",
+      },
+      {
+        src: "https://cryptologos.cc/logos/curve-dao-token-crv-logo.png",
         alt: "Linkedin icon",
       },
     ],
-    labels: [{ name: "Scrape", color: "#6E5B9875" }],
+    labels: [{ name: "Swap", color: "#6E5B9875" }],
   },
   {
-    title: "Find top playlists",
+    title: "Find new projects",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png",
+        src: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
         alt: "Spotify icon",
       },
     ],
     labels: [{ name: "Scrape", color: "#6E5B9875" }],
   },
   {
-    title: "Create a course for yourself",
+    title: "Optimize your portfolio",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+        src: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
         alt: "Youtube icon",
       },
       {
-        src: "https://builtinsf.com/sites/www.builtinsf.com/files/2022-08/logo.png",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNvsFSvVHz_EkKpHzfTvTZKM-VaiqOpiorA&s",
         alt: "Udemy icon",
       },
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png",
+        src: "https://images.seeklogo.com/logo-png/52/1/linea-logo-png_seeklogo-527155.png",
         alt: "Google icon",
       },
     ],
     labels: [
       { name: "Analyse", color: "#6E5B9875" },
-      { name: "Report", color: "#0FA95880" },
+      { name: "Buy", color: "#0FA95880" },
     ],
   },
   {
-    title: "Spot misinformation",
+    title: "Wallet Scanner",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png",
+        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/2048px-MetaMask_Fox.svg.png",
         alt: "Twitter icon",
       },
     ],
-    labels: [
-      { name: "Scrape", color: "#6E5B9875" },
-      { name: "Analyse", color: "#0FA95880" },
-    ],
+    labels: [{ name: "Scan", color: "#0FA95880" }],
   },
   {
-    title: "Create Job board",
+    title: "Algorithmic Trading",
     icons: [
       {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png",
+        src: "https://cryptologos.cc/logos/thumbs/aave.png?",
+        alt: "Linkedin icon",
+      },
+      {
+        src: "https://cryptologos.cc/logos/thumbs/sushiswap.png",
         alt: "Linkedin icon",
       },
     ],
     labels: [
-      { name: "Scrape", color: "#6E5B9875" },
-      { name: "Analyse", color: "#0FA95880" },
+      { name: "Bridge", color: "#6E5B9875" },
+      { name: "Buy", color: "#0FA95880" },
     ],
   },
 ];
