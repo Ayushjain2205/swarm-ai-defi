@@ -33,21 +33,22 @@ const Chain = ({ addNextNode }) => {
   ];
 
   const handleSelectChain = (option) => {
+    setSelectedChain(option.label);
     setIsLoading(true);
     setIsThinking(true);
-    setSelectedChain(option.label);
 
+    // Using setTimeout to simulate a loading process
     setTimeout(() => {
       setIsLoading(false);
       setIsThinking(false);
-      addNextNode(); // Call the next node function after the delay
-    }, 5000); // 5 seconds delay
+      addNextNode(); // Trigger the next node in your workflow
+    }, 5000); // Delay set to 5 seconds
   };
 
   return (
     <UseBlock label="Chain" label_color="#6E5B98">
       <div className="flex flex-col justify-center items-center gap-[15px] w-full">
-        <Loader isRunning={isLoading} />
+        {isLoading && <Loader isRunning={isLoading} />}
         <SelectImage
           placeholder="Select Chain"
           options={chainOptions}
