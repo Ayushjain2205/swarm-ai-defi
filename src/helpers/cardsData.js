@@ -20,7 +20,7 @@ const cardsData = [
         alt: "Linkedin icon",
       },
       {
-        src: "https://cryptologos.cc/logos/curve-dao-token-crv-logo.png",
+        src: "https://cryptologos.cc/logos/thumbs/pancakeswap.png",
         alt: "Linkedin icon",
       },
     ],

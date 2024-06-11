@@ -44,12 +44,12 @@ const DraggableItem = ({ type, icon, border }) => {
           {type.charAt(0)}
         </span>
       )}
-      {showTooltip &&
+      {/* {showTooltip &&
         !isDragging && ( // Double check to ensure tooltip is not shown during dragging
           <div className="absolute z-10 w-auto p-2 text-sm text-white bg-black rounded shadow-lg -top-[30px] capitalize">
             {type}
           </div>
-        )}
+        )} */}
     </div>
   );
 };
